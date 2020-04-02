@@ -21,8 +21,62 @@ export default function Despesas(){
                 </TouchableOpacity>
             </View>
             <View>
-                <Text style={styles.headerTextRD}>Despesas Lançadas</Text>
+                <Text style={styles.headerTextRD}><FontAwesome  name="minus" size={20} color="#FF4206"/> Despesas Lançadas</Text>
             </View>
+            <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Internet</Text>
+                        <Text style={styles.titleDash}>R$ 79,90</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Internet</Text>
+                        <Text style={styles.titleDash}>R$ 79,90</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Internet</Text>
+                        <Text style={styles.titleDash}>R$ 79,90</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Internet</Text>
+                        <Text style={styles.titleDash}>R$ 79,90</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Internet</Text>
+                        <Text style={styles.titleDash}>R$ 79,90</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Internet</Text>
+                        <Text style={styles.titleDash}>R$ 79,90</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
         </View>
     );
 }

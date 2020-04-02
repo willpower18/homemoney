@@ -7,6 +7,38 @@ export default StyleSheet.create({
         paddingHorizontal: 24,
         paddingTop: Constants.statusBarHeight + 20,
     },
+    InformText:{
+        textAlign:"center",
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#737380'
+    },
+    input:{
+        borderColor: '#737380',
+        borderWidth: 0.5,
+        borderRadius: 8,
+        marginTop:10,
+        paddingLeft: 10,
+        height:50,
+        width: '75%',
+        fontSize: 20,
+        color:'#737380'
+    },
+    receitas:{
+        fontSize:18,
+        fontWeight:"bold",
+        color: '#00a651'
+    },
+    despesas:{
+        fontSize:18,
+        fontWeight:"bold",
+        color: '#FF4206'
+    },
+    saldo:{
+        fontSize:18,
+        fontWeight:"bold",
+        color: '#ffbe06'
+    },
     header:{
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -76,6 +108,21 @@ export default StyleSheet.create({
         fontSize:15,
         color:'#737380',
     },
+    lancReceita:{
+        fontSize:16,
+        color: '#00a651',
+    },
+    lancDespesa:{
+        fontSize:16,
+        color: '#FF4206',
+    },
+    lancSaldo:{
+        fontSize:16,
+        color: '#ffbe06',
+    },
+    lancDot:{
+       textAlign:'center'
+    },
     contactBox:{
         padding:24,
         borderRadius: 8,
@@ -100,7 +147,8 @@ export default StyleSheet.create({
 
     },
     action:{
-        backgroundColor: "transparent",
+        marginTop:10,
+        backgroundColor: "#92278f",
         borderRadius:8,
         height: 50,
         width: '20%',
@@ -114,13 +162,6 @@ export default StyleSheet.create({
     },
     headerText:{
         fontSize:15,
-        paddingTop:10,
-        color:'#737380',
-        fontWeight: 'bold',
-    },
-    headerTextRD:{
-        textAlign:'center',
-        fontSize:20,
         paddingTop:10,
         color:'#737380',
         fontWeight: 'bold',
@@ -167,5 +208,12 @@ export default StyleSheet.create({
         color: '#737380',
         fontSize:15,
         fontWeight: 'bold',
-    }
+    }, 
+    headerTextRD:{
+        textAlign:'center',
+        fontSize:20,
+        paddingTop:10,
+        color:'#737380',
+        fontWeight: 'bold',
+    },
 });

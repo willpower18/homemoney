@@ -22,11 +22,11 @@ export default StyleSheet.create({
         paddingTop: 10,
     },
     dashBoard:{
-        marginTop:25,
-        padding:24,
+        marginTop:15,
+        padding:10,
         borderRadius: 8,
         backgroundColor: '#fff',
-        marginBottom:16,
+        marginBottom:0,
     },
     dashBoardHeader:{
         flexDirection: 'row',
@@ -34,9 +34,8 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     titleDash:{
-        fontSize:24,
-        color: '#00a651',
-        fontWeight: 'bold',
+        fontSize:16,
+        color: '#13131a',
     },
     titleDashResult:{
         fontSize:24,

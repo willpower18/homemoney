@@ -21,7 +21,61 @@ export default function Receitas(){
                 </TouchableOpacity>
             </View>
             <View>
-                <Text style={styles.headerTextRD}>Receitas Lançadas</Text>
+                <Text style={styles.headerTextRD}><FontAwesome  name="plus" size={20} color="#00a651"/> Receitas Lançadas</Text>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Salário Will</Text>
+                        <Text style={styles.titleDash}>R$ 2.500,00</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Salário Will</Text>
+                        <Text style={styles.titleDash}>R$ 2.500,00</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Salário Will</Text>
+                        <Text style={styles.titleDash}>R$ 2.500,00</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Salário Will</Text>
+                        <Text style={styles.titleDash}>R$ 2.500,00</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Salário Will</Text>
+                        <Text style={styles.titleDash}>R$ 2.500,00</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.dashBoard}>
+                    <View style={styles.dashBoardHeader}>
+                        <Text style={styles.titleDash}>Salário Will</Text>
+                        <Text style={styles.titleDash}>R$ 2.500,00</Text>
+                        <TouchableOpacity onPress={() => {}}>
+                            <FontAwesome  name="trash" size={20} color="#92278f"/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View>
         </View>
     );

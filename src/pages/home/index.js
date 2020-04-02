@@ -15,6 +15,18 @@ export default function Home(){
         navigation.navigate('Despesas');
     }
 
+    function navigateToBusca(){
+        navigation.navigate('Busca');
+    }
+
+    function navigateToNovaReceita(){
+        navigation.navigate('NovaReceita');
+    }
+
+    function navigateToNovaDespesa(){
+        navigation.navigate('NovaDespesa');
+    }
+
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -51,15 +63,15 @@ export default function Home(){
             </View>
             <View style={styles.dashBoard2}>
                 <View style={styles.lineButtons}>
-                    <TouchableOpacity style={styles.action} onPress={() => {}}>
+                    <TouchableOpacity style={styles.action} onPress={() => navigateToNovaReceita()}>
                         <FontAwesome name="plus" size={30} color="#92278f"/>
                         <Text style={styles.actionText}>Lançar Receita</Text>    
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.action} onPress={() => {}}>
+                    <TouchableOpacity style={styles.action} onPress={() => navigateToNovaDespesa()}>
                         <FontAwesome name="minus" size={30} color="#92278f"/>
                         <Text style={styles.actionText}>Lançar Despesa</Text>    
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.action} onPress={() => {}}>
+                    <TouchableOpacity style={styles.action} onPress={() => navigateToBusca()}>
                         <FontAwesome name="search" size={30} color="#92278f"/>
                         <Text style={styles.actionText}>Efetuar Busca</Text>    
                     </TouchableOpacity>
