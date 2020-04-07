@@ -100,10 +100,12 @@ export default StyleSheet.create({
 
     },
     action:{
-        backgroundColor: "transparent",
+        marginTop:10,
+        marginBottom:10,
+        backgroundColor: "#00a651",
         borderRadius:8,
         height: 50,
-        width: '20%',
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -167,5 +169,23 @@ export default StyleSheet.create({
         color: '#737380',
         fontSize:15,
         fontWeight: 'bold',
-    }
+    },
+    InformText:{
+        textAlign:"center",
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#737380'
+    },
+    input:{
+        borderColor: '#737380',
+        borderWidth: 0.5,
+        borderRadius: 8,
+        marginTop:10,
+        marginBottom:10,
+        paddingLeft: 10,
+        height:50,
+        width: '100%',
+        fontSize: 20,
+        color:'#737380'
+    },
 });
