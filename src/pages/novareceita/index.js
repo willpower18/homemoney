@@ -1,19 +1,68 @@
 import React, { useState } from 'react';
-import { View,TextInput, ScrollView, Text, TouchableOpacity } from 'react-native';
+import { View, TextInput, ScrollView, Text, TouchableOpacity } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text'
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { FontAwesome } from '@expo/vector-icons';
 import styles from './styles';
 
+import api from '../../services/api';
+
 export default function NovaReceita(){
+    const navigation = useNavigation();
+    const route = useRoute();
     //Estado da Aplicação
+    const [referencia, setReferencia] = useState(route.params.referencia);
     const [nomeReceita, setNomeReceita] = useState('');
     const [dataLancamento, setDataLancamento] = useState('');
     const [valor, setValor] = useState('');
 
-    //Navegação
-    const navigation = useNavigation();
-    
+    //Manipulação de Dados da Aplicação
+    async function addReceita(){
+        if(nomeReceita == '' | valor == ''){
+            alert('Preencha os campos Nome da Receita e Valor!');
+            return false;
+        }
+        else{
+            var formatedData = "";
+            if(dataLancamento == ''){
+                var dtHoje = new Date();
+                const JsonDate = dtHoje.toJSON();
+                formatedData = JsonDate;
+            }
+            else{
+                formatedData = dataLancamento.substr(6,4);
+                formatedData += "-";
+                formatedData += dataLancamento.substr(3,2);
+                formatedData += "-";
+                formatedData += dataLancamento.substr(0,2);
+                formatedData += "T00:00:00Z";
+            }
+            
+            var formatedValue = valor.replace('R','');
+            formatedValue = formatedValue.replace('$','');
+            formatedValue = formatedValue.replace('.','');
+            formatedValue = formatedValue.replace(',','.');
+            var valorFloat = parseFloat(formatedValue);
+            const data = {
+                Id: "",
+                NomeReceita: nomeReceita,
+                DtLancamento: formatedData,
+                Valor: valorFloat
+            };
+            const response = await api.post('api/receitas',data);
+            if(response.status == 200){
+                alert('Receita Lançada com Sucesso!');
+                setNomeReceita('');
+                setDataLancamento('');
+                setValor('');
+            }
+            else{
+                alert('Não foi possível cadastrar.');
+            }
+        }
+    }
+
+    //Navegação    
     function navigateToHome(){
         navigation.navigate('Home');
     }
@@ -22,7 +71,7 @@ export default function NovaReceita(){
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerBrand}>$ HomeMoney</Text>
-                <Text style={styles.headerText}>04/2020</Text>
+                <Text style={styles.headerText}>{referencia}</Text>
                 <TouchableOpacity onPress={navigateToHome}>
                     <FontAwesome  name="arrow-left" size={30} color="#92278f"/>
                 </TouchableOpacity>
@@ -69,7 +118,7 @@ export default function NovaReceita(){
                         style={styles.input}
                         placeholder={"R$"}
                     />
-                    <TouchableOpacity style={styles.action} onPress={() => {}}>
+                    <TouchableOpacity style={styles.action} onPress={() => addReceita()}>
                         <FontAwesome name="check" size={25} color="#fff" />
                     </TouchableOpacity>
                 </View>
